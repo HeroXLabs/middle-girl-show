@@ -17,9 +17,11 @@ module.exports = function(deployTarget) {
 
   if (deployTarget === 'production') {
     ENV.build.environment = 'production';
-    ENV.redis = {
-      url: process.env.REDIS_URL,
-      allowOverwrite: true
+
+    ENV['s3-index'] = {
+      accessKeyId: process.env.AWS_KEY,
+      secretAccessKey: process.env.AWS_SECRET,
+      bucket: process.env.AWS_BUCKET_INDEX
     };
 
     ENV.s3 = {
@@ -27,7 +29,7 @@ module.exports = function(deployTarget) {
       secretAccessKey: process.env.AWS_SECRET,
       bucket: process.env.AWS_BUCKET,
       region: process.env.AWS_REGION
-    }
+    };
   }
 
   // Note: if you need to build some configuration asynchronously, you can return
