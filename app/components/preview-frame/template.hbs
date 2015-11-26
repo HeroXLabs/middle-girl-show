@@ -1,0 +1,25 @@
+{{#if previewUrl}}
+  <div class="{{iosDeviceClass}} ios-wrapper">
+    <div class="ios-device__screen">
+      <iframe src={{previewUrl}}>
+        <p>Your browser does not support iframes.</p>
+      </iframe>
+    </div>
+  </div>
+  <div class="preview-nav btn-group" role="group" aria-label="toggleDeviceMode">
+    <button {{action "changeMode" 'desktop'}} type="button" class="btn btn-default desktop-mode {{if isBrowseDesktop 'active'}}">
+      <i class="fa fa-desktop fa-2x"></i>
+    </button>
+    <button {{action "changeMode" 'tablet'}} type="button" class="btn btn-default tablet-mode {{if isBrowseTablet 'active'}}">
+      <i class="fa fa-tablet fa-2x"></i>
+    </button>
+    <button {{action "changeMode" 'mobile'}} type="button" class="btn btn-default mobile-mode {{if isBrowseMobile 'active'}}">
+      <i class="fa fa-mobile-phone fa-2x"></i>
+    </button>
+  </div>
+  <div class='preview-logo'>
+    <span class='logo'></span>
+  </div>
+{{else}}
+  <p>No preview available yet.</p>
+{{/if}}

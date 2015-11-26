@@ -1,0 +1,116 @@
+@mixin left-separator
+  box-shadow: inset 1px 0 0 0 rgba(0,0,0,0.2)
+
+@mixin bs-callout($border-color: #eee)
+  padding: 20px
+  margin: 20px 0
+  border: 1px solid $border-color
+  border-left-width: 5px
+  border-radius: 3px
+
+@mixin color-alpha($red: 225, $green: 225, $blue: 225, $alpha: 0.1)
+  color: rgba($red, $green, $blue, $alpha)
+
+@mixin background-color-alpha($red: 225, $green: 225, $blue: 225, $alpha: 0.1)
+  background-color: rgba($red, $green, $blue, $alpha)
+
+@mixin form-lg($input-size: 52px)
+  .form-control-feedback
+    width: $input-size
+    height: $input-size
+    line-height: $input-size
+  select.input-lg
+    height: $input-size
+    line-height: $input-size
+  input.ember-text-field, .radio > label
+    height: $input-size
+    padding: 10px 16px
+    font-size: 18px
+    line-height: 1.3333333
+    border-radius: 5px
+  .long-description
+    padding: 10px
+
+@mixin bg-size($way: cover)
+  -moz-background-size: $way
+  -o-background-size: $way
+  -webkit-background-size: $way
+  background-size: $way
+
+@mixin color-transition
+  transition: color 192ms ease-out
+  transition: background-color 192ms ease-out
+
+@mixin form-input-important
+  letter-spacing: 1px
+  font-weight: 700
+  padding: 7px 12px!important
+  &.btn
+    width: 100%
+    @include list-button(white)
+
+@mixin list-button($color: $gray)
+  text-transform: uppercase
+  font-size: 12px
+  letter-spacing: 1px
+  font-weight: 700
+  padding: 7px 12px!important
+  border: 1px solid $color
+
+@mixin full-view
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+
+$top-gradient-bar-color: rgba(80,80,80,.4)
+@mixin top-gradient-bar
+  &:before
+    position: absolute
+    display: block
+    content: ""
+    width: 640px
+    height: 1px
+    top: 0
+    left: 50%
+    margin-left: -320px
+    background: linear-gradient(to right,rgba(0,0,0,0) 0, $top-gradient-bar-color 50%,rgba(0,0,0,0) 100%)
+
+@mixin color-gradient-bg($color1: #333, $color2: #000)
+  background-color: $color2
+  background-image: -ms-radial-gradient(center top, circle farthest-side, $color1 0%, $color2 100%)
+  background-image: -moz-radial-gradient(center top, circle farthest-side, $color1 0%, $color2 100%)
+  background-image: -o-radial-gradient(center top, circle farthest-side, $color1 0%, $color2 100%)
+  background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, $color1), color-stop(1, $color2))
+  background-image: -webkit-radial-gradient(center top, circle farthest-side, $color1 0%, $color2 100%)
+  background-image: radial-gradient(circle farthest-side at center top, $color1 0%, $color2 100%)
+
+@mixin color-gradient-bg2($color1: rgba(16, 47, 70, 0), $color2: rgba(16, 47, 70, 0.2), $color3: #efb676, $color4: #e0a681, $color5: #0f1b58)
+  background-color: $color1
+  background-image: -webkit--webkit-radial-gradient(closest-corner, $color1 60%, $color2), -webkit--webkit-linear-gradient(342deg, $color3, $color4 10%, $color5 90%)
+  background-image: -webkit--moz-radial-gradient(closest-corner, $color1 60%, $color2), -webkit--moz-linear-gradient(342deg, $color3, $color4 10%, $color5 90%)
+  background-image: -webkit--o-radial-gradient(closest-corner, $color1 60%, $color2), -webkit--o-linear-gradient(342deg, $color3, $color4 10%, $color5 90%)
+  background-image: -webkit--ms-radial-gradient(closest-corner, $color1 60%, $color2), -webkit--ms-linear-gradient(342deg, $color3, $color4 10%, $color5 90%)
+  background-image: -webkit-radial-gradient(closest-corner, $color1 60%, $color2), -webkit-linear-gradient(108deg, $color3, $color4 10%, $color5 90%)
+  background-image: -moz--webkit-radial-gradient(closest-corner, $color1 60%, $color2), -moz--webkit-linear-gradient(342deg, $color3, $color4 10%, $color5 90%)
+  background-image: -moz--moz-radial-gradient(closest-corner, $color1 60%, $color2), -moz--moz-linear-gradient(342deg, $color3, $color4 10%, $color5 90%)
+  background-image: -moz--o-radial-gradient(closest-corner, $color1 60%, $color2), -moz--o-linear-gradient(342deg, $color3, $color4 10%, $color5 90%)
+  background-image: -moz--ms-radial-gradient(closest-corner, $color1 60%, $color2), -moz--ms-linear-gradient(342deg, $color3, $color4 10%, $color5 90%)
+  background-image: -moz-radial-gradient(closest-corner, $color1 60%, $color2), -moz-linear-gradient(108deg, $color3, $color4 10%, $color5 90%)
+  background-image: -ms--webkit-radial-gradient(closest-corner, $color1 60%, $color2), -ms--webkit-linear-gradient(342deg, $color3, $color4 10%, $color5 90%)
+  background-image: -ms--moz-radial-gradient(closest-corner, $color1 60%, $color2), -ms--moz-linear-gradient(342deg, $color3, $color4 10%, $color5 90%)
+  background-image: -ms--o-radial-gradient(closest-corner, $color1 60%, $color2), -ms--o-linear-gradient(342deg, $color3, $color4 10%, $color5 90%)
+  background-image: -ms--ms-radial-gradient(closest-corner, $color1 60%, $color2), -ms--ms-linear-gradient(342deg, $color3, $color4 10%, $color5 90%)
+  background-image: -ms-radial-gradient(closest-corner, $color1 60%, $color2), -ms-linear-gradient(108deg, $color3, $color4 10%, $color5 90%)
+
+@mixin animation-duration($duration: 0.5s)
+  -webkit-animation-duration: 0.5s
+  -moz-animation-duration: 0.5s
+  -o-animation-duration: 0.5s
+
+@mixin transition-basic($duration: 0.3s, $road: ease-in-out)
+  -webkit-transition: all $duration $road
+  -moz-transition: all $duration $road
+  -o-transition: all $duration $road
+  transition: all $duration $road

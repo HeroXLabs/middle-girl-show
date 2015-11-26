@@ -1,0 +1,45 @@
+$preview-bg: #ebeef0 url("images/preview-bg.png") 0/5px 5px
+
+.preview-frame
+  background: $preview-bg
+  position: relative
+  padding: 0
+  height: 100%
+  > div
+    position: relative
+  .preview-logo
+    position: fixed
+    bottom: 30px
+    right: 30px
+    height: 40px
+    width: 40px
+    background-size: 100%
+    background-image: url(images/logo.png)
+    background-repeat: no-repeat
+  .preview-nav
+    position: fixed
+    bottom: 30px
+    left: 30px
+    button
+      width: 56px
+      height: 44px
+  .ios-wrapper
+    margin: 2% auto
+    @include transition-basic
+    &.iphone-5s--large
+      width: 340px
+      height: 628px
+      border-radius: 24px
+      padding: 30px 10px
+    &.ipad-air-2
+      border-radius: 30px
+      width: 768px
+      height: 1024px
+      padding: 40px 20px
+    &.desktop-device
+      margin: 0
+      height: 100%
+  iframe
+    width: 100%
+    height: 100%
+    border: 0
