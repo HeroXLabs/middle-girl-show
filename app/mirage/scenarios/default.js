@@ -6,7 +6,14 @@ export default function(server) {
     { name: "nth", preview_url: "http://198.199.101.184/sites/nth/index.html" },
     { name: "ty-travel", preview_url: "http://198.199.101.184/sites/tianrui-travel/index.html" },
     { name: "topivf", preview_url: "http://198.199.101.184/sites/topivfus/index.html" },
-    { name: "lkr-travel", preview_url: "http://198.199.101.184/sites/lai-ke-rui-travel/index.html" }
+    { name: "lkr-travel", preview_url: "http://198.199.101.184/sites/lai-ke-rui-travel/index.html" },
+    { name: "sj-travel", preview_url: "http://ussjtravel.com" },
+    { name: "pacificbizhub", preview_url: "http://pacificbizhub.com" },
+    { name: "pc-travel", preview_url: "http://pengchengtravel.com" },
+    { name: "gj-yimin", preview_url: "http://heroxlabs.github.io/guojiyimin" },
+    { name: "galaxycarrental", preview_url: "http://galaxycarrental.com" },
+    { name: "gogospa", preview_url: "http://heroxlabs.github.io/gogospa" },
+    { name: "dj-beauty", preview_url: "http://djbeauty.net" }
   ];
 
   sites.forEach( (site) => {
