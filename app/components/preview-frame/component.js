@@ -4,7 +4,7 @@ const { computed, Component } = Ember;
 
 export default Component.extend({
   classNames: "preview-frame",
-  mode: "mobile",
+  mode: "desktop",
 
   iosDeviceClass: computed('mode', function(){
     let mode = this.get('mode');
