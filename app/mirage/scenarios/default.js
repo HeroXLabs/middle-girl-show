@@ -13,7 +13,8 @@ export default function(server) {
     { name: "gj-yimin", preview_url: "http://heroxlabs.github.io/guojiyimin" },
     { name: "galaxycarrental", preview_url: "http://galaxycarrental.com" },
     { name: "gogospa", preview_url: "http://heroxlabs.github.io/gogospa" },
-    { name: "dj-beauty", preview_url: "http://djbeauty.net" }
+    { name: "dj-beauty", preview_url: "http://djbeauty.net" },
+    { name: "caprices-dailleurs", preview_url: "http://heyook.github.io/caprices" }
   ];
 
   sites.forEach( (site) => {
