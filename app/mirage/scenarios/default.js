@@ -14,7 +14,8 @@ export default function(server) {
     { name: "galaxycarrental", preview_url: "http://galaxycarrental.com" },
     { name: "gogospa", preview_url: "http://heroxlabs.github.io/gogospa" },
     { name: "dj-beauty", preview_url: "http://djbeauty.net" },
-    { name: "caprices-dailleurs", preview_url: "http://heyook.github.io/caprices" }
+    { name: "caprices-dailleurs", preview_url: "http://heyook.github.io/caprices" },
+    { name: "sanhewu", preview_url: "http://198.199.101.184/sites/sanhewu/index.html" }
   ];
 
   sites.forEach( (site) => {
